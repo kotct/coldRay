@@ -1,21 +1,24 @@
 prg=coldRay.$(shell arch)
-com=g++
+com=gcc
 
 src=src
 obj=obj
 
-head=$(src)/include.hpp $(src)/p.hpp $(src)/vars.hpp
+head=$(src)/include.h $(src)/p.h $(src)/vars.h
 
-prgobj=$(obj)/main.o $(obj)/vars.o
+prgobj=$(obj)/eventHandler.o $(obj)/main.o $(obj)/vars.o
 prgflg=`sdl-config --cflags --libs` -lGL -lGLU -lglut
 
 all: $(prg)
 
-$(obj)/vars.o: $(head) $(src)/vars.cpp
-	$(com) -c -o $(obj)/vars.o $(src)/vars.cpp
+$(obj)/vars.o: $(head) $(src)/vars.c
+	$(com) -c -o $(obj)/vars.o $(src)/vars.c
 
-$(obj)/main.o: $(head) $(src)/main.cpp
-	$(com) -c -o $(obj)/main.o $(src)/main.cpp
+$(obj)/main.o: $(head) $(src)/main.c
+	$(com) -c -o $(obj)/main.o $(src)/main.c
+
+$(obj)/eventHandler.o: $(head) $(src)/eventHandler.c
+	$(com) -c -o $(obj)/eventHandler.o $(src)/eventHandler.c
 
 $(prg): $(prgobj)
 	$(com) -o $(prg) $(prgobj) $(prgflg)

@@ -1,3 +1,3 @@
-#include "vars.hpp"
+#include "vars.h"
 
 char *indevString = "in-dev";

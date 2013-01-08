@@ -1,8 +1,8 @@
-#ifndef EVENTHANDLER_HPP
-#define EVENTHANDLER_HPP
+#ifndef EVENTHANDLER_H
+#define EVENTHANDLER_H
 
-#include "include.hpp"
-#include "p.hpp"
+#include "include.h"
+#include "p.h"
 
 void onClose(int code);
 

@@ -1,6 +1,6 @@
-#ifndef VARS_HPP
-#define VARS_HPP
+#ifndef VARS_H
+#define VARS_H
 
-#include "include.hpp"
+#include "include.h"
 
 #endif

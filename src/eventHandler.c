@@ -1,4 +1,4 @@
-#include "eventHandler.hpp"
+#include "eventHandler.h"
 
 void onClose(int code) {
   SDL_Quit();

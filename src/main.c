@@ -1,6 +1,6 @@
-#include "eventHandler.hpp"
-#include "include.hpp"
-#include "p.hpp"
+#include "eventHandler.h"
+#include "include.h"
+#include "p.h"
 
 
 int main(int argc, char *argv[]) {
